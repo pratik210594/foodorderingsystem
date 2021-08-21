@@ -1,3 +1,6 @@
+<html>
+<body>
+<form action ="getdata.php" method="get">
 <?php
 
 
@@ -6,16 +9,18 @@ $con = mysqli_connect("localhost","root","","foodorderingsystem");
 $getuser = "select * from pending_order";
 $username;
 $result = mysqli_query($con,$getuser);
-
+echo"<div id='demo'>hello</div>";
 if(mysqli_num_rows($result) > 0)
 {
+	echo"<select name='cars' id='cars'>";
+
 	while($row = mysqli_fetch_assoc($result))
 	{
 	
 		echo "<br>";
 		 $username = $row['username'];
-	
-	$a ="<button id ='".$username."' onclick='myFunction(".$username.")'>".$username."</button>";
+	$a = " <option value='".$username."'>".$username."</option>";
+//	$a ="<button id ='".$username."' onclick='myFunction(".$username.")'>".$username."</button>";
 				
 
 		echo $a;
@@ -24,27 +29,23 @@ if(mysqli_num_rows($result) > 0)
 		
 		
 }
-
+echo"<input type ='submit'>";
 
 $result = mysqli_query($con,$getuser);
-?>
+
+ echo"
  <script>
 function myFunction(username) {
-		
-	var result="
-	$getorder = 'select * from ;
-	$username = '1';
-	echo 'a';
-	$result = mysqli_query($con,$getuser);
-	";
-		
-
-	 
-	document.write(result);
- // alert(document.getElementById(demo).innerHTML);
-  alert(username.id);
- 
-
+	
+   //username.executeSql('select * from a');
+  document.getElementById('demo').innerHTML=username.id;
+ // alert(username.id);
+  
 }
-</script>
+</script>";
 
+?>
+
+</form>
+</body>
+</html>
