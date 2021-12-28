@@ -9,7 +9,7 @@ $con = mysqli_connect("localhost","root","","foodorderingsystem");
 $getuser = "select * from pending_order";
 $username;
 $result = mysqli_query($con,$getuser);
-echo"<div id='demo'>hello</div>";
+
 if(mysqli_num_rows($result) > 0)
 {
 	echo"<select name='cars' id='cars'>";

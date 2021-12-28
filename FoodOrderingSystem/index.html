@@ -14,8 +14,7 @@
  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
  <link href="assets/css/style.css" rel="stylesheet"><!-- Main Template CSS-->
  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
- <script src="assets/js/session_login.js"></script>
+ 
  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -35,44 +34,25 @@
 <form action = "foodorder.php" method ="get">
 <br><br><br><br>
  <div class="container text-center text-md-left" data-aos="fade-up">
-	<div class= "card-header-tabs" ng-app="ngblurApp" ng-controller="ngblurCtrl">
-    	<label class ="col-form-label-lg">Username: </label><input type="text" id="takeinput" name="username" ng-model="username" ng-blur="getdetails()"><br>
-			
+	<div class= "card-header-tabs">
+    	<label class ="col-form-label-lg">Username: </label><input type="text" name="username"><br>
 		<label class ="col-form-label-lg">Mobile No:</label><input type="text" name="mobileno"><br>
 		Customer: <input type="radio" name="usertype" value="Customer"><br>
 		Admin: <input type ="radio" name="usertype" value ="Admin"><br>
-		
-		<input type="submit" class="btn-login" value="Login">
-	
-<p id="name">{{result}}</p>
-	
-		<script type="text/javascript">
-
-			//	var ProductName = sessionStorage.getItem('ProductName');
-				document.getElementById("name").innerHTML = ProductName;
-		</script>
-
+		<input type="submit" class="btn-get-started" value="Login">
+		  <a href="#about" class="btn-get-started scrollto" style=" font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #3498db;
+  text-transform: uppercase;">Get Started</a>
 	</div>
 </div>
 
 </body>
-
-
-
-<script type="text/javascript">
-
-var app = angular.module('ngblurApp', []);
-
-app.controller('ngblurCtrl', function ($scope) {
-
-$scope.getdetails = function () {
-var ProductName = document.getElementById("takeinput").value;
-//sessionStorage.setItem('ProductName', ProductName);
-$scope.result = "You Came Out of Control";
-
-}
-
-});
-
-</script>
 </html>
