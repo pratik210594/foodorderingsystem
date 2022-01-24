@@ -192,7 +192,7 @@
 		  var total_element = document.createElement("LABEL");
 		 total_element.id = "Total";											// Item Price
 		 total_element.innerHTML = total;
-		// demo.appendChild(total_element);
+		 demo.appendChild(total_element);
 		
 	  }
 	  else{
